@@ -361,11 +361,11 @@ function NavBar({ lang, setLang, t, navigate, scrolled }) {
 function Hero({ t, navigate }) {
   const [trackCode, setTrackCode] = useState("");
   return (
-    <section className="relative overflow-hidden pt-[76px]">
-      <div className="absolute inset-0 z-0">
-        <img src="/images/background.jpg" alt="" className="w-full h-full object-cover object-center" />
-        <div className="absolute inset-0 bg-[#0B2545]/87" />
-      </div>
+    <section
+      className="relative overflow-hidden pt-[76px]"
+      style={{ backgroundImage: "url('/images/background.jpg')", backgroundSize: "cover", backgroundPosition: "center top" }}
+    >
+      <div className="absolute inset-0 z-0 bg-[#0B2545]/91" />
       <div className="absolute inset-0 z-0 opacity-[0.35]">
         <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-[#E63946]/15 blur-3xl" />
       </div>
@@ -705,11 +705,11 @@ function FAQ({ t }) {
 
 function FinalCTA({ t, navigate }) {
   return (
-    <section className="relative overflow-hidden py-20">
-      <div className="absolute inset-0 z-0">
-        <img src="/images/background-2.jpg" alt="" className="w-full h-full object-cover object-center" />
-        <div className="absolute inset-0 bg-[#0B2545]/84" />
-      </div>
+    <section
+      className="relative overflow-hidden py-20"
+      style={{ backgroundImage: "url('/images/background-2.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+    >
+      <div className="absolute inset-0 z-0 bg-[#0B2545]/82" />
       <Container className="relative z-10 text-center">
         <h2 className="font-display font-bold text-white text-[2rem] sm:text-[2.4rem] tracking-tight">{t.finalCta.title}</h2>
         <p className="mt-3 text-white/55 text-[1.02rem]">{t.finalCta.sub}</p>
