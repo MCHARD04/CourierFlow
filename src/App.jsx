@@ -361,11 +361,15 @@ function NavBar({ lang, setLang, t, navigate, scrolled }) {
 function Hero({ t, navigate }) {
   const [trackCode, setTrackCode] = useState("");
   return (
-    <section className="relative bg-[#0B2545] overflow-hidden pt-[76px]">
-      <div className="absolute inset-0 opacity-[0.4]">
-        <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-[#E63946]/10 blur-3xl" />
+    <section className="relative overflow-hidden pt-[76px]">
+      <div className="absolute inset-0 z-0">
+        <img src="/images/background.jpg" alt="" className="w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-[#0B2545]/87" />
       </div>
-      <Container className="relative grid lg:grid-cols-2 gap-12 items-center py-20 lg:py-28">
+      <div className="absolute inset-0 z-0 opacity-[0.35]">
+        <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-[#E63946]/15 blur-3xl" />
+      </div>
+      <Container className="relative z-10 grid lg:grid-cols-2 gap-12 items-center py-20 lg:py-28">
         <div>
           <Eyebrow light>{t.hero.eyebrow}</Eyebrow>
           <h1 className="font-display font-bold text-white text-[2.75rem] sm:text-[3.4rem] leading-[1.05] tracking-tight whitespace-pre-line">
@@ -701,8 +705,12 @@ function FAQ({ t }) {
 
 function FinalCTA({ t, navigate }) {
   return (
-    <section className="bg-[#0B2545] py-20">
-      <Container className="text-center">
+    <section className="relative overflow-hidden py-20">
+      <div className="absolute inset-0 z-0">
+        <img src="/images/background-2.jpg" alt="" className="w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-[#0B2545]/84" />
+      </div>
+      <Container className="relative z-10 text-center">
         <h2 className="font-display font-bold text-white text-[2rem] sm:text-[2.4rem] tracking-tight">{t.finalCta.title}</h2>
         <p className="mt-3 text-white/55 text-[1.02rem]">{t.finalCta.sub}</p>
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
